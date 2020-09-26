@@ -1,0 +1,82 @@
+/*======================================
+//--//-->   STYLES GENERALES
+======================================*/
+body {
+  background-color: #f5f5f5;
+  color: #4e4e4e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1e1e1e;
+}
+
+a {
+  color: #1e1e1e;
+  transition: all 0.5s ease-in-out;
+}
+a:hover {
+  color: #23395B;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.p-r {
+  position: relative;
+}
+
+.color-a {
+  color: #23395B;
+}
+
+.color-d {
+  color: #f5f5f5;
+}
+
+.color-text-a {
+  color: #4e4e4e;
+}
+
+.page-wrapper {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.wrapper-page {
+  max-width: 80%;
+  margin: 5% auto 0;
+}
+
+.ex-page-content .text-error {
+  color: #252932;
+  font-size: 98px;
+  font-weight: 700;
+  line-height: 150px;
+}
+
+.ex-page-content .text-error i {
+  font-size: 90px;
+  padding: 0 5px;
+}
+
+.text-primary {
+  color: #23395B;
+}
+
+.text-pink {
+  color: #fb6d9d;
+}
+
+.text-info {
+  color: #8EA8C3;
+}
+
+.text-muted {
+  color: #4e4e4e;
+}
+
+/*# sourceMappingURL=errorfile.css.map */

@@ -3,12 +3,12 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home2/herydigital/public_html/
     - /bin/cp index.html $DEPLOYPATH
-#    - /bin/cp .htaccess $DEPLOYPATH
-#    - /bin/cp page-400.html $DEPLOYPATH
-#    - /bin/cp page-403.html $DEPLOYPATH
-#    - /bin/cp page-404.html $DEPLOYPATH
-#    - /bin/cp page-500.html $DEPLOYPATH
-#    - /bin/cp page-503.html $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp page-400.html $DEPLOYPATH
+    - /bin/cp page-403.html $DEPLOYPATH
+    - /bin/cp page-404.html $DEPLOYPATH
+    - /bin/cp page-500.html $DEPLOYPATH
+    - /bin/cp page-503.html $DEPLOYPATH
 #    - /bin/cp sitemap.xml $DEPLOYPATH
 #    - /bin/cp robots.txt $DEPLOYPATH
 #    - /bin/cp -R /home2/herydigital/repositories/herydigital/blog $DEPLOYPATH

@@ -78,7 +78,7 @@ if (isset($_POST)) {
 	$headers .= 'X-Mailer: PHP/' . phpversion();
 
 	$message_content = '<strong>' . $nameTitle . '</strong> ' . $name . '<br>';
-	$message_content = '<strong>' . $phoneTitle . '</strong> ' . $phone . '<br>';
+	$message_content .= '<strong>' . $phoneTitle . '</strong> ' . $phone . '<br>';
 	$message_content .= '<strong>' . $emailTitle . '</strong> ' . $email . '<br>';
 	$message_content .= '<strong>' . $messageTitle . '</strong> ' . nl2br($message);
 

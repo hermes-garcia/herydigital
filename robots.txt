@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: js/
+Disallow: lib/
+Disallow: contactform/
+Sitemap: https://herydigital.com/sitemap.xml

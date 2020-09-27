@@ -1974,12 +1974,16 @@ section {
   box-shadow: none;
   max-height: -webkit-fill-available;
 }
+
 /*--------------------------------------
 # Modal
 --------------------------------------*/
 @media (max-width: 600px) {
   .modal {
     margin-top: 35px;
+  }
+  .modal .modal-dialog {
+    margin-bottom: 75px;
   }
 }
 

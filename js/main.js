@@ -193,8 +193,10 @@
             });
 
             $('#name').on('input', function (){
-                if (!/^[a-zA-Záéíóúüñ]*$/i.test(this.value)) {
-                    this.value = this.value.replace(/[^a-zA-Z]*/ig, "");
+                if (!/^[ a-zA-Záéíóúüñ]*$/i.test(this.value)) {
+                    this.value = this.value.replace(/[^ a-zA-Záéíóúüñ]*/ig, "");
+                }else{
+                    return false;
                 }
             });
 

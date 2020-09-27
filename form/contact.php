@@ -45,7 +45,7 @@ if (isset($_POST)) {
 		die('El email de recepción para el formulario de contacto no ha sudo configurado');
 	}
 
-	if (strlen($name) < 3 || strlen($name) > 50) {
+	if (strlen($name) < 4 || strlen($name) > 50) {
 		die($contactErrorName);
 	}
 
@@ -57,11 +57,11 @@ if (isset($_POST)) {
 		die($contactErrorPhone);
 	}
 
-	if (strlen($subject) < 3 || strlen($subject) > 50) {
+	if (strlen($subject) < 3 || strlen($subject) > 256) {
 		die($contactErrorSubject);
 	}
 
-	if (strlen($message) < 3 || strlen($message) > 256) {
+	if (strlen($message) < 3 || strlen($message) > 512) {
 		die($contactErrorMessage);
 	}
 

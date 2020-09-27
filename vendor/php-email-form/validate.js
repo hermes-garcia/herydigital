@@ -109,7 +109,7 @@
             submitPhpForm(thisForm, action, thisForm.serialize());
         }
 
-        return true;
+        return false;
     });
 
     function submitPhpForm(form, action, data) {

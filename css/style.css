@@ -333,7 +333,7 @@ Hero Section
   overflow: hidden;
   position: relative;
   background: url(../img/heroimage.png);
-  box-shadow: inset 0 0 0 2000px rgba(131, 131, 131, 0.5);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
   background-position-y: -95px;
   background-size: cover;
   padding: 0;
@@ -341,7 +341,7 @@ Hero Section
 @media (max-width: 575px) {
   #hero {
     background-position-x: -250px;
-    box-shadow: inset 0 0 0 2000px rgba(131, 131, 131, 0.7);
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
   }
 }
 @media (max-width: 991px) {

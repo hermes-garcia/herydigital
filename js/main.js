@@ -2,6 +2,13 @@
     "use strict";
 
     let scrolltoOffset = $('#header').outerHeight() - 1;
+    let ua = window.navigator.userAgent,
+        IS_IPAD = ua.match(/iPad/i) != null,
+        IS_IPHONE = !IS_IPAD && ((ua.match(/iPhone/i) != null) || (ua.match(/iPod/i) != null)),
+        IS_IOS = IS_IPAD || IS_IPHONE,
+        IS_ANDROID = !IS_IOS && ua.match(/android/i) != null,
+        IS_MOBILE = IS_IOS || IS_ANDROID;
+
     $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto, .cta-btn', function (e) {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             let target = $(this.hash);
@@ -133,6 +140,21 @@
         $('html, body').animate({
             scrollTop: 0
         }, 1500, 'easeInOutExpo');
+        return false;
+    });
+
+    $('#facebook-mobile-button').click(function () {
+        console.log('ua: ' + ua);
+        console.log('IS_MOBILE: ' + IS_MOBILE);
+        console.log('IS_IOS: ' +IS_IOS);
+        console.log('IS_ANDROID: ' + IS_ANDROID);
+        if(!IS_MOBILE){
+            window.open('https://www.facebook.com/herydigital/', '_blank');
+        }else if(IS_IOS){
+            window.open('fb://page/?id=101696321704995', '_blank');
+        }else if(IS_ANDROID){
+            window.open('fb://page/101696321704995', '_blank');
+        }
         return false;
     });
 

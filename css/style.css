@@ -1862,18 +1862,21 @@ section {
   margin: 0 0 40px 0;
 }
 #footer .social-links a {
-  font-size: 18px;
+  font-size: 30px;
   display: inline-block;
   background: #5AB5AA;
   color: #ffff;
   line-height: 1;
   padding: 8px 0;
-  margin-right: 4px;
+  margin-right: 15px;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   transition: 0.3s;
+}
+#footer .social-links a i {
+  padding-right: 1px;
 }
 #footer .social-links a:hover {
   background: #5AB5AA;

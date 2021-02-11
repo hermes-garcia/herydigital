@@ -1161,13 +1161,7 @@ section {
     bottom: 2%;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .pricing .filter-web .btn-wrap {
-    position: absolute;
-    left: 20%;
-    bottom: 2%;
-  }
-}
+
 .pricing #pricing-filters {
   list-style: none;
   margin-bottom: 20px;
@@ -1326,8 +1320,7 @@ section {
   color: #d4d6df !important;
 }
 .pricing .btn-wrap {
-  margin: 20px -20px -20px -20px;
-  margin-top: 0;
+  margin: 0 -20px -20px;
   padding: 0 15px 20px;
   background: #ffff;
   text-align: center;
@@ -1385,6 +1378,10 @@ section {
   color: #ffff;
 }
 
+.pricing .pricing-container .owl-height, .pricing .pricing-container .owl-stage-outer {
+  height: 730px !important;
+}
+
 /*--------------------------------------
 # F.A.Q
 --------------------------------------*/
@@ -1401,7 +1398,6 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: #5AB5AA;
   font-size: 18px;
   font-weight: 500;
 }

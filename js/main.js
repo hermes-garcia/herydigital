@@ -167,7 +167,7 @@
         }
 
         let portfolioIsotope = $('.portfolio-container').isotope({
-            itemSelector: '.portfolio-item'
+            itemSelector: '.portfolio-item',
         });
 
         $('#portfolio-filters li').on('click', function () {
@@ -175,23 +175,21 @@
             $(this).addClass('filter-active');
 
             portfolioIsotope.isotope({
-                filter: $(this).data('filter')
+                filter: $(this).data('filter'),
             });
             aos_init();
-        });
-
-        let pricingIsotope = $('.pricing-container').isotope({
-            itemSelector: '.pricing-item',
-            layoutMode: 'fitRows'
         });
 
         $('#pricing-filters li').on('click', function () {
             $("#pricing-filters li").removeClass('filter-active');
             $(this).addClass('filter-active');
 
-            pricingIsotope.isotope({
-                filter: $(this).data('filter')
+            $('.pricing-container').isotope({
+                filter: $(this).data('filter'),
+                itemSelector: '.pricing-item',
+                layoutMode: 'horiz',
             });
+
             aos_init();
         });
 
@@ -236,28 +234,29 @@
         });
     });
 
-    $(".testimonials-carousel").owlCarousel({
-        autoplay: true,
+    $('.web-pricing-carousel').owlCarousel({
         dots: true,
         loop: true,
+        responsiveClass: true,
         responsive: {
-            0: {
-                items: 1
+            0:{
+                items: 1,
+                nav: true
             },
-            768: {
-                items: 2
+            576:{
+                items: 2,
+                nav: false
             },
-            900: {
-                items: 3
+            1024:{
+                items: 3,
+                nav: false
+            },
+            1200:{
+                items: 4,
+                nav: false,
+                loop: false
             }
         }
-    });
-
-    $(".portfolio-details-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        items: 1
     });
 
     function aos_init() {

@@ -1,0 +1,34 @@
+name: DO Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Copy files
+        uses: appleboy/ssh-action@master
+        env:
+          DEPLOYPATH: "/var/www/herydigital.com/public_html/"
+        with:
+          host: ${{secrets.SSH_HOST}}
+          key: ${{secrets.SSH_KEY}}
+          username: ${{secrets.SSH_USERNAME}}
+          envs: DEPLOYPATH
+          script: |
+            cd repositories/herydigital
+            git pull origin
+            echo "Update repo"
+            echo "$DEPLOYPATH"
+            cp *.html $DEPLOYPATH
+            cp robots.txt $DEPLOYPATH
+            cp sitemap.xml $DEPLOYPATH
+            cp .htaccess $DEPLOYPATH
+            cp composer* $DEPLOYPATH
+            cp -R css/ $DEPLOYPATH
+            cp -R form/ $DEPLOYPATH
+            cp -R img/ $DEPLOYPATH
+            cp -R js/ $DEPLOYPATH
+            cp -R lib/ $DEPLOYPATH

@@ -25,3 +25,41 @@ ErrorDocument 403 /page-403.html
 ErrorDocument 404 /page-404.html
 ErrorDocument 500 /page-500.html
 ErrorDocument 503 /page-503.html
+
+# BEGIN Expire headers
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresDefault A1
+  ExpiresByType image/jpg "access plus 2 days"
+  ExpiresByType image/jpeg "access plus 2 days"
+  ExpiresByType image/webp "access plus 2 days"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/ico "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType text/html "access plus 2 days"
+  ExpiresByType text/css "access plus 3 month"
+  ExpiresByType text/javascript "access plus 3 month"
+  ExpiresByType application/javascript "access plus 3 month"
+  ExpiresByType application/x-shockwave-flash "access plus 1 year"
+</IfModule>
+# END Expire headers
+
+# BEGIN Cache-Control Headers
+<ifModule mod_headers.c>
+  Header append Cache-Control must-revalidate
+  <filesMatch "\.(ico|jpg|jpeg|jpe?g|webp|png|gif|swf)$">
+    Header set Cache-Control "public"
+  </filesMatch>
+  <filesMatch "\.(css)$">
+    Header set Cache-Control "public"
+  </filesMatch>
+  <filesMatch "\.(js)$">
+    Header set Cache-Control "private"
+  </filesMatch>
+  <filesMatch "\.(x?html?|php)$">
+    Header set Cache-Control "private, must-revalidate"
+  </filesMatch>
+</ifModule>
+# END Cache-Control Headers

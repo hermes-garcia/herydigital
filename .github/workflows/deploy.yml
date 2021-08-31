@@ -28,7 +28,6 @@ jobs:
             cp .htaccess $DEPLOYPATH
             cp composer* $DEPLOYPATH
             cp -R css/ $DEPLOYPATH
-            cp -R form/ $DEPLOYPATH
             cp -R img/ $DEPLOYPATH
             cp -R js/ $DEPLOYPATH
             cp -R lib/ $DEPLOYPATH

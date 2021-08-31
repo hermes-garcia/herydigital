@@ -1,0 +1,12 @@
+{
+    "name": "hermesgarcia/herydigital",
+    "authors": [
+        {
+            "name": "Hermes Garcia",
+            "email": "hermes@hermesgarcia.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    }
+}

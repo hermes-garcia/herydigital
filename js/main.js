@@ -205,7 +205,7 @@
                 $('#privacy').modal('show');
             }
 
-            $('#web-pricing').click();
+            $('#ecommerce-pricing').click();
 
             $('.js-contact').click(function(){
                 let interest = $(this).data('interest');
